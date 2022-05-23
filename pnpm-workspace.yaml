@@ -1,0 +1,1 @@
+{ "version": "independent", "useWorkspaces": true, "packages": ["packages/**"] }
