@@ -1,0 +1,28 @@
+{
+  "name": "package-two",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p ../target/package-two && cp start.js ../target/package-two"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "./target"
+        ],
+        "dependsOn": [
+          {
+            "target": "build",
+            "projects": "dependencies"
+          }
+        ]
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
